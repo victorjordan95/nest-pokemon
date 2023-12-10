@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { PokemonModule } from './pokemon/pokemon.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { FileModule } from './file/file.module';
+import { CommonModule } from './common/common.module';
 
 @Module({
   imports: [
@@ -9,6 +10,7 @@ import { FileModule } from './file/file.module';
     MongooseModule.forRoot('mongodb://127.0.0.1:27017/mongodb'),
     PokemonModule,
     FileModule,
+    CommonModule,
   ],
   controllers: [],
   providers: [],

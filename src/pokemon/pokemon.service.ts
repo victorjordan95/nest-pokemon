@@ -80,6 +80,10 @@ export class PokemonService {
   async remove(id: string) {
     const pokemon = await this.findOne(id);
 
+    if (!pokemon) {
+      throw new NotFoundException('Pokemon not found');
+    }
+
     await pokemon.deleteOne();
   }
 
