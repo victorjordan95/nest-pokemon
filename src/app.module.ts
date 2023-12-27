@@ -3,6 +3,7 @@ import { PokemonModule } from './pokemon/pokemon.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { FileModule } from './file/file.module';
 import { CommonModule } from './common/common.module';
+import { SeedModule } from './seed/seed.module';
 
 @Module({
   imports: [
@@ -11,6 +12,7 @@ import { CommonModule } from './common/common.module';
     PokemonModule,
     FileModule,
     CommonModule,
+    SeedModule,
   ],
   controllers: [],
   providers: [],
